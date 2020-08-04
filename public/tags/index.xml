@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on OfficeGeek</title>
-    <link>http://www.officegeek.dk/tags/</link>
+    <link>https://officegeek.dk/tags/</link>
     <description>Recent content in Tags on OfficeGeek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>da-dk</language>
     <copyright>OfficeGeek.dk</copyright>
     
-	<atom:link href="http://www.officegeek.dk/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://officegeek.dk/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
