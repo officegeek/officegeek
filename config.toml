@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "http://www.officegeek.dk"
+baseURL = "https://officegeek.dk"
 title = "OfficeGeek"
 theme = "godocs-hugo"
 # disable language
