@@ -1,0 +1,151 @@
+######################## default configuration ####################
+baseURL = "http://www.officegeek.dk"
+title = "OfficeGeek"
+theme = "godocs-hugo"
+# disable language
+disableLanguages = ["fr"] # desable language from here
+
+# hugo outputs
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+# render unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+link = "plugins/search/auto-complete.css"
+[[params.plugins.css]]
+link = "plugins/featherlight/featherlight.min.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/masonry/masonry.min.js"
+[[params.plugins.js]]
+link = "plugins/featherlight/featherlight.min.js"
+[[params.plugins.js]]
+link = "plugins/clipboard/clipboard.min.js"
+[[params.plugins.js]]
+link = "plugins/match-height/jquery.matchHeight-min.js"
+[[params.plugins.js]]
+link = "plugins/search/auto-complete.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+[[params.plugins.js]]
+link = "plugins/search/lunr.min.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search-page.js"
+
+
+############################## navigation ###############################
+
+# main menu
+[[menu.main]]
+name = "Blog"
+url = "/blog/"
+weight = 1
+
+[[menu.main]]
+name = "FAQ"
+url = "/faq"
+weight = 2
+
+[[menu.footer]]
+name = "Kontakt"
+url = "kontakt"
+weight = 3
+
+[[menu.footer]]
+name = "Blog"
+url = "/blog/"
+weight = 3
+
+[[menu.footer]]
+name = "FAQ"
+url = "/faq/"
+weight = 4
+
+
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.png"
+# Meta data
+description = "Online kurser i Microsoft Office programmerne"
+author = "Tue Hellstern"
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+# Google Analitycs
+google_analitycs_id = "UA-148024579-1" # your id
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use jpg, png, svg or gif format.
+
+# Navigation button solid
+[params.navigation_button_solid]
+enable = true
+label = "Kontakt"
+link = "kontakt"
+
+  
+############################# social site ########################
+[[params.social]]
+title = "facebook"
+icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
+link = "https://www.facebook.com/OfficeGeekdk-100708868104942"
+
+[[params.social]]
+title = "twitter"
+icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+[[params.social]]
+title = "linkedin"
+icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+
+################################### English language #####################################
+[Languages.en]
+languageName = "Dk"
+languageCode = "da-dk"
+weight = 1
+home = "Start"
+# copyright
+copyright = "OfficeGeek.dk"
+
+# banner
+[Languages.en.banner]
+title = "OfficeGeek"
+subtitle = "Online kurser der gør dig mere effektiv"
+image = "images/banner.jpg"
+
+# call to action
+[Languages.en.call_to_action]
+enable = true
+title = "Har du et spørgsmål?"
+image = "images/cta-illustration.jpg"
+content = "Er der noget du er tvivl om eller vil spørge om"
+
+  # call to action button
+  [Languages.en.call_to_action.button]
+  enable = "true"
+  label = "Spørgsmål"
+  link = "kontakt"

@@ -1,0 +1,29 @@
+- id: search
+  translation: Search
+
+- id: search_placeholder
+  translation: Søg her...
+
+- id: topics
+  translation: Kurser
+
+- id: first_name
+  translation: Fornavn
+
+- id: last_name
+  translation: Efternavn
+
+- id: email
+  translation: E-mail
+
+- id: contact_reason
+  translation: Reason of Contact
+
+- id: write_message
+  translation: Skriv din besked
+
+- id: send
+  translation: Send
+
+- id: search_result
+  translation: Søge resultat
