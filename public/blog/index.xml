@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on OfficeGeek</title>
+    <link>http://www.officegeek.dk/blog/</link>
+    <description>Recent content in Blogs on OfficeGeek</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>da-dk</language>
+    <copyright>OfficeGeek.dk</copyright>
+    
+	<atom:link href="http://www.officegeek.dk/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VBA - Outlook opgaver til Excel</title>
+      <link>http://www.officegeek.dk/blog/eksporter-outlook-opgaver-til-excel-med-vba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.officegeek.dk/blog/eksporter-outlook-opgaver-til-excel-med-vba/</guid>
+      <description>En af de ting jeg syntes bedst om ved Microsoft Office pakken er det, at de enkelte programmer arbejder super godt sammen. Det er meget nemt gå fra det ene program til det andet, det er nemt at flytte data fra et program til et andet.
+Jeg styrer mine opgaver i Outlook, men nogle gange er det en fordel at have dem i Excel. Det kan være fordi de skal bruges i en anden sammenhæng f.</description>
+    </item>
+    
+  </channel>
+</rss>

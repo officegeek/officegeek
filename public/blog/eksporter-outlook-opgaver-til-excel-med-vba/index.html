@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="da-dk"><head>
+  <meta charset="utf-8">
+  <title>VBA - Outlook opgaver til Excel</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Bruf VBA til at eksportere opgaver fra Outlook til Excel">
+  <meta name="author" content="Tue Hellstern">
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="http://www.officegeek.dk/plugins/bootstrap/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="http://www.officegeek.dk/plugins/themify-icons/themify-icons.css">
+  
+  <link rel="stylesheet" href="http://www.officegeek.dk/plugins/search/auto-complete.css">
+  
+  <link rel="stylesheet" href="http://www.officegeek.dk/plugins/featherlight/featherlight.min.css">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="http://www.officegeek.dk/scss/style.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="http://www.officegeek.dk/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="http://www.officegeek.dk/images/favicon.png" type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="sticky-top navigation ">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <a class="navbar-brand" href="/">
+        
+        <img class="img-fluid" src="http://www.officegeek.dk/images/logo.png" alt="OfficeGeek">
+        </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-align-right h4 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <ul class="navbar-nav mx-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Start</a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.officegeek.dk/blog/">Blog</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.officegeek.dk/faq">FAQ</a>
+          </li>
+          
+          
+          <li class="nav-link">
+            
+            
+          </li>
+        </ul>
+
+        
+        <div class="d-lg-none d-block">
+          
+
+          
+          <!-- get start btn -->
+          <a href="http://www.officegeek.dk/kontakt"
+            class="btn btn-sm btn-primary ml-lg-4">Kontakt</a>
+          
+        </div>
+        
+      </div>
+
+      
+      <form class="form-inline search-wrapper my-3" class="search-wrapper" action="/search">
+        <input id="search-by" name="s" type="search" class="form-control" placeholder="Search here ...">
+        <button class="border-0 bg-white" type="submit"><i class="ti-search"></i></button>
+      </form>
+      
+
+      
+      <div class="d-lg-flex d-none">
+        
+
+        
+        <!-- get start btn -->
+        <a href="http://www.officegeek.dk/kontakt"
+          class="btn btn-sm btn-primary ml-lg-4">Kontakt</a>
+        
+      </div>
+      
+
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<!-- details page -->
+<section class="pt-5">
+  <div class="container shadow section-sm rounded">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 d-none d-md-block">
+        <ul class="sidenav">
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/" title="Basic Startup"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/">Basic Startup</a>
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/requirments/" title="Requirments"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/requirments/">Requirments</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/installation/" title="Installation"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/installation/">Installation</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/configuration/" title="Configuration"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/configuration/">Configuration</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/customization/" title="Customization"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/customization/">Customization</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/elements/" title="Elements"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/elements/">Elements</a>
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/elements/child-1/" title="child-1"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/elements/child-1/">child-1</a>
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/elements/child-1/child-2/" title="child-2"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/elements/child-1/child-2/">child-2</a>
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/basic-startup/elements/child-1/child-2/child-3/" title="child-3"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/basic-startup/elements/child-1/child-2/child-3/">child-3</a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+    
+  </ul>
+</li>
+
+
+
+    
+  </ul>
+</li>
+
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/" title="DTU"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/">DTU</a>
+  
+  
+  <ul>
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/intro/kursusindhold/" title="Kursus indhold"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/intro/kursusindhold/">Kursus indhold</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/intro/dato_2020_2/" title="Datoer 2020 2"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/intro/dato_2020_2/">Datoer 2020 2</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/excel/01_excel/" title="Excel dag 1"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/excel/01_excel/">Excel dag 1</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/excel/02_excel/" title="Excel dag 2"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/excel/02_excel/">Excel dag 2</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/excel/03_excel/" title="Excel dag 3"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/excel/03_excel/">Excel dag 3</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/excel/excel_addin/" title="Excel AddIn"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/excel/excel_addin/">Excel AddIn</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/project/project/" title="Microsoft Project"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/project/project/">Microsoft Project</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/database/database/" title="Database"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/database/database/">Database</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/vba/vba/" title="VBA"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/vba/vba/">VBA</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/opgaver/opgaver/" title="Opgaver"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/opgaver/opgaver/">Opgaver</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/dtu/links/links/" title="Links"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/dtu/links/links/">Links</a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/account-bill/" title="Account Bill"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/account-bill/">Account Bill</a>
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/account-bill/linux/" title="Linux"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/account-bill/linux/">Linux</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/account-bill/mac/" title="Mac OS"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/account-bill/mac/">Mac OS</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/account-bill/routing/" title="Routing"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/account-bill/routing/">Routing</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/account-bill/ubuntu/" title="Ubuntu"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/account-bill/ubuntu/">Ubuntu</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/account-bill/windows/" title="Akash"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/account-bill/windows/">Akash</a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/excel/" title="Excel"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/excel/">Excel</a>
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/excel/test/" title="Windows"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/excel/test/">Windows</a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/our-features/" title="Our Features"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/our-features/">Our Features</a>
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/our-features/linux/" title="Linux"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/our-features/linux/">Linux</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/our-features/mac/" title="Mac OS"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/our-features/mac/">Mac OS</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/our-features/routing/" title="Routing"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/our-features/routing/">Routing</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/our-features/ubuntu/" title="Ubuntu"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/our-features/ubuntu/">Ubuntu</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/our-features/windows/" title="Windows"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/our-features/windows/">Windows</a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/pivottabel_10_minutter/" title="Pivot tabel på 10 minutter"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/pivottabel_10_minutter/">Pivot tabel på 10 minutter</a>
+  
+  
+  <ul>
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/pivottabel_10_minutter/data_organisering/dataorganisering/" title="Dataorganisering"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/pivottabel_10_minutter/data_organisering/dataorganisering/">Dataorganisering</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/pivottabel_10_minutter/opretpivottabel/opretpivottabel/" title="Opret en Pivot tabel"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/pivottabel_10_minutter/opretpivottabel/opretpivottabel/">Opret en Pivot tabel</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/pivottabel_10_minutter/slicer/slicer/" title="Slicer"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/pivottabel_10_minutter/slicer/slicer/">Slicer</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/pivottabel_10_minutter/nyedata/nyedata/" title="Nye data"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/pivottabel_10_minutter/nyedata/nyedata/">Nye data</a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/theme-facility/" title="Theme Facility"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/theme-facility/">Theme Facility</a>
+  
+  
+  <ul>
+    
+    
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/theme-facility/linux/" title="Linux"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/theme-facility/linux/">Linux</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/theme-facility/mac/" title="Mac OS"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/theme-facility/mac/">Mac OS</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/theme-facility/routing/" title="Routing"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/theme-facility/routing/">Routing</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/theme-facility/ubuntu/" title="Ubuntu"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/theme-facility/ubuntu/">Ubuntu</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/theme-facility/windows/" title="Windows"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/theme-facility/windows/">Windows</a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/blog/" title="Blogs"
+  class="sidelist parent ">
+  <a href="http://www.officegeek.dk/blog/">Blogs</a>
+  
+  
+  <ul>
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/blog/eksporter-outlook-opgaver-til-excel-med-vba/" title="VBA - Outlook opgaver til Excel"
+  class="sidelist parent active">
+  <a href="http://www.officegeek.dk/blog/eksporter-outlook-opgaver-til-excel-med-vba/">VBA - Outlook opgaver til Excel</a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/outlookonlenote/" title="OutlookOnlenotes"
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/outlookonlenote/">OutlookOnlenotes</a>
+  
+  
+  <ul>
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+<li data-nav-id="http://www.officegeek.dk/outlookonlenote/outlook-og-onenote-projeckt-styring/" title=""
+  class="sidelist  ">
+  <a href="http://www.officegeek.dk/outlookonlenote/outlook-og-onenote-projeckt-styring/"></a>
+  
+  
+
+
+    
+  </ul>
+</li>
+
+
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <div class="px-lg-5 px-4">
+          <h2 class="mb-4 font-weight-medium">VBA - Outlook opgaver til Excel</h2>
+          
+          <div class="content"><p>En af de ting jeg syntes bedst om ved Microsoft Office pakken er det, at de enkelte programmer arbejder super godt sammen. Det er meget nemt gå fra det ene program til det andet, det er nemt at flytte data fra et program til et andet.</p>
+<p>Jeg styrer mine opgaver i Outlook, men nogle gange er det en fordel at have dem i Excel. Det kan være fordi de skal bruges i en anden sammenhæng f.eks. i Word eller PowerPoint.
+For nemt at eksportere opgaverne fra Outlook til Excel har jeg oprette en makro der gør det for mig.</p>
+<p>{{.TableOfContents}}</p>
+<h3 id="outlook-indstillinger">Outlook indstillinger</h3>
+<p>Når du arbejder med VBA i Outlook er det en fordel at have aktiveret fanen &ldquo;Udvikler&rdquo;</p>
+<p><strong>Det gør du på denne måde:</strong></p>
+<ol>
+<li>Klik på Filer - Indstillinger</li>
+<li>Klik på &ldquo;Tilpas båndet&rdquo;</li>
+<li>Sæt hak i &ldquo;Udvikler&rdquo;</li>
+<li>Klik &ldquo;Ok&rdquo;</li>
+</ol>
+<p><img src="/images/outlook_opgave_vba.jpg" alt="Udvikler"></p>
+<h3 id="object-library">Object Library</h3>
+<p>Når du fra et Microsoft Office program skal have adgang til et andet via VBA, skal du oprette en reference til dette programs Object Model.</p>
+<ol>
+<li>Tools</li>
+<li>References</li>
+<li>Find og sæt hak i <em>Microsoft Excel 16.0 Object Libaray</em><br>
+Nummeret er afhængiet af din Office version</li>
+</ol>
+<p><img src="/images/excel_object_library.jpg" alt="Udvikler"></p>
+<h3 id="opret-makroen">Opret makroen</h3>
+<p>djksfhjksd</p>
+<h3 id="vba-koden">VBA koden</h3>
+<pre><code class="language-{vba}" data-lang="{vba}">Sub EksportOpgaverExcel()
+
+' Variabler
+    ' Find Dokumenet mappen - Variable
+    Dim MyShell As Object
+    Dim DocumentFolder As String
+    
+    ' Outlook - Variable
+    Dim olnameSpace As Outlook.NameSpace
+    Dim taskFolder As Outlook.MAPIFolder
+    Dim tasks As Outlook.Items
+    Dim task As Outlook.TaskItem
+    
+    ' Excel - Variable
+    Dim appExcel As New Excel.Application
+    Dim fileExcel As Excel.Workbook
+    Dim fileNavn As String
+    Dim FindesExcelFilen As Boolean
+    
+    ' Gennemløb variable
+    Dim i As Integer
+    Dim n As Integer
+    n = 2 ' Start Row
+    
+    ' Find Dokument mappen
+    Set MyShell = CreateObject(&quot;WScript.Shell&quot;)
+    DocumentFolder = MyShell.SpecialFolders(&quot;MyDocuments&quot;)
+    
+    
+    ' Opret Excel filen
+    Set appExcel = CreateObject(&quot;Excel.Application&quot;)
+    ' appExcel.Visible = True
+    fileNavn = &quot;MineOpgaver.xlsx&quot;
+    
+    ' Findes filen?
+    FindesExcelFilen = Dir(DocumentFolder &amp; &quot;\&quot; &amp; fileNavn) &gt; &quot;&quot;
+    
+    If FindesExcelFilen Then
+        ' Åben Excel filen
+        Set fileExcel = appExcel.Workbooks.Open(DocumentFolder &amp; &quot;\MineOpgaver.xlsx&quot;)
+    Else
+        ' Opret Excel filen
+        Set fileExcel = appExcel.Workbooks.Add
+        fileExcel.SaveAs FileName:=DocumentFolder &amp; &quot;\&quot; &amp; fileNavn
+    End If
+
+    ' Outlook mapper
+    Set olnameSpace = Application.GetNamespace(&quot;MAPI&quot;)
+    Set taskFolder = olnameSpace.GetDefaultFolder(olFolderTasks)
+    Set tasks = taskFolder.Items
+
+    ' Opret overskrifter i Excel
+    With fileExcel.Sheets(1)
+        .Range(&quot;A1&quot;).Value = &quot;Emne&quot;
+        .Range(&quot;B1&quot;).Value = &quot;Forfaldsdato&quot;
+        .Range(&quot;C1&quot;).Value = &quot;Pct. fuldført&quot;
+        .Range(&quot;D1&quot;).Value = &quot;Status&quot;
+    End With
+    
+    ' Eksport af opgaver
+    For i = 1 To tasks.Count ' Gennemløb af dine opgaver
+
+        Set task = tasks.Item(i)
+
+        If Not task.Complete Then
+            With fileExcel.Sheets(1)
+                .Range(&quot;A&quot; &amp; n).Value = task.Subject
+                .Range(&quot;B&quot; &amp; n).Value = task.DueDate
+                .Range(&quot;C&quot; &amp; n).Value = task.PercentComplete
+                .Range(&quot;D&quot; &amp; n).Value = task.Status
+            End With
+            
+            n = n + 1
+        End If
+
+    Next i
+    
+    ' Autofit kolonner
+    fileExcel.Sheets(1).Columns(&quot;A:D&quot;).AutoFit
+    
+    ' Gem
+    fileExcel.Save
+    
+    ' Oprydning
+    fileExcel.Close
+    Set fileExcel = Nothing
+    appExcel.Quit
+    
+End Sub
+
+</code></pre></div>
+          
+          <nav class="pagination">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+            
+            
+            
+
+            
+            <a class="nav nav-prev" href="http://www.officegeek.dk/blog/"><i class="ti-arrow-left mr-2"></i>
+              <span class="d-none d-md-block">Blogs</span></a>
+            
+            
+            <a class="nav nav-next" href="http://www.officegeek.dk/outlookonlenote/"> <span class="d-none d-md-block">OutlookOnlenotes</span><i
+                class="ti-arrow-right ml-2"></i></a>
+            
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /details page -->
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="row align-items-center border-bottom py-5">
+      <div class="col-lg-4">
+        <ul class="list-inline footer-menu text-center text-lg-left">
+          
+          <li class="list-inline-item"><a href="http://www.officegeek.dk/blog/">Blog</a></li>
+          
+          <li class="list-inline-item"><a href="http://www.officegeek.dk/kontakt">Kontakt</a></li>
+          
+          <li class="list-inline-item"><a href="http://www.officegeek.dk/faq/">FAQ</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-4 text-center mb-4 mb-lg-0">
+        <a class="navbar-brand" href="/">
+          
+          <img class="img-fluid" src="http://www.officegeek.dk/images/logo.png" alt="OfficeGeek">
+          </a>
+      </div>
+      <div class="col-lg-4">
+        <ul class="list-inline social-icons text-lg-right text-center">
+          
+          <li class="list-inline-item"><a href="https://www.facebook.com/OfficeGeekdk-100708868104942"><i class="ti-facebook"></i></a></li>
+          
+          <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
+          
+          <li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="py-4 text-center">
+      <small class="text-light">OfficeGeek.dk</small>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  var indexURL = "http://www.officegeek.dk/index.json";
+  
+  var baseurl = "http:\/\/www.officegeek.dk";
+  
+</script>
+
+<!-- JS Plugins -->
+
+<script src="http://www.officegeek.dk/plugins/jQuery/jquery.min.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/masonry/masonry.min.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/featherlight/featherlight.min.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/clipboard/clipboard.min.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/search/auto-complete.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/search/search.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/search/lunr.min.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/search/fuse.min.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/search/mark.js"></script>
+
+<script src="http://www.officegeek.dk/plugins/search/search-page.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="http://www.officegeek.dk/js/script.min.js"></script>
+
+<!-- google analitycs -->
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-148024579-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+
+</html>

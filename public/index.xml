@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OfficeGeek</title>
+    <link>http://www.officegeek.dk/</link>
+    <description>Recent content on OfficeGeek</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>da-dk</language>
+    <copyright>OfficeGeek.dk</copyright>
+    <lastBuildDate>Thu, 23 Jul 2020 22:27:25 +0200</lastBuildDate>
+    
+	<atom:link href="http://www.officegeek.dk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dataorganisering</title>
+      <link>http://www.officegeek.dk/pivottabel_10_minutter/data_organisering/dataorganisering/</link>
+      <pubDate>Thu, 23 Jul 2020 22:23:02 +0200</pubDate>
+      
+      <guid>http://www.officegeek.dk/pivottabel_10_minutter/data_organisering/dataorganisering/</guid>
+      <description>Data Tabel  Alle kolonner skal have en overskrift Ikke nogel tomme rækker Ikke nogle totaler eller subtotaler  Opret en tabel  Navn Design Rækken total Filterknap  Nye koloner  Year Month Total  Filter  De største 3  </description>
+    </item>
+    
+    <item>
+      <title>Kursus indhold</title>
+      <link>http://www.officegeek.dk/dtu/intro/kursusindhold/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/intro/kursusindhold/</guid>
+      <description>Jeg har valgt at du ikke skal ud og købe 4-5 forskellige bøger til en formue - De er alligevel forælde inden de er trykt
+Derfor er alt materiale online ressourcer. Jeg har inkluderet rigtig mange links og forventer ikke at du læser dem alle. De er dog rigtig gode som en hjælp til løsninge af de opgaver jeg stiller og til løsning af dine fremtidige opgaver ude i erhvervslivet.</description>
+    </item>
+    
+    <item>
+      <title>Opret en Pivot tabel</title>
+      <link>http://www.officegeek.dk/pivottabel_10_minutter/opretpivottabel/opretpivottabel/</link>
+      <pubDate>Thu, 23 Jul 2020 22:25:08 +0200</pubDate>
+      
+      <guid>http://www.officegeek.dk/pivottabel_10_minutter/opretpivottabel/opretpivottabel/</guid>
+      <description>Vis anbefalede PivotTables - Hurtigere start Vis forskellige felt visninger Vis hvor de forskellige felter kommer fra &amp;raquo; Overskrifter i tabellen Formatering af celler &amp;ndash; Number format  Numberformat Overskrifter Må ikke være det sammen som en eksisterende overskrift
+Design Sortering Autofit Pivottable options
+Filter Vis dem
+Gradtotal Vis dem
+Subtotal Vis dem
+Report layout  Reapte all item labels Mulighed for at folde værdier ind/ud +/- knapper  Fieldlist Hvis den væk</description>
+    </item>
+    
+    <item>
+      <title>Datoer 2020 2</title>
+      <link>http://www.officegeek.dk/dtu/intro/dato_2020_2/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/intro/dato_2020_2/</guid>
+      <description>Modulet løber over 14 undervisningsgange og er opdelt i følgende hovedemner.
+Dette er oversigten for efteråret 2020:
+Microsoft Excel
+ 03-09-2020 - Excel 10-09-2020 - Excel  Microsoft Project
+ 17-09-2020 - Project 24-10-2020 - Project  Microsoft Excel
+ 01-10-2020 - Excel  Database
+ 08-10-2020 - Database 15-10-2020 - Efterårsferie 22-10-2020 - Database  Microsoft VBA i Excel
+ 29-10-2020 - VBA 05-11-2020 - VBA 12-11-2020 - VBA  R contra Excel</description>
+    </item>
+    
+    <item>
+      <title>Excel dag 1</title>
+      <link>http://www.officegeek.dk/dtu/excel/01_excel/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/excel/01_excel/</guid>
+      <description>Excel funktioner Excel har over 300 indbyggede funktioner, nogle af dem kender du sikkert, f.eks. SUM
+Microsoft har oprette en oversigt, sorteret efter kategorien, over funktionerne. Excel funktioner efter kategori
+Du har også mulighed for at finde funktionerne alfabetisk Excel funktioner alfabetisk
+Absolutte og relative cellereferencer Det centrale i et regneark er begrebet cellereferencer. Disse kan være relative eller absolutte. Forskellen har kun betydning, når du kopierer formler.
+Ved relative cellereferencer er der så at sige altid samme forhold mellem formel og cellernes referencer.</description>
+    </item>
+    
+    <item>
+      <title>Slicer</title>
+      <link>http://www.officegeek.dk/pivottabel_10_minutter/slicer/slicer/</link>
+      <pubDate>Thu, 23 Jul 2020 22:26:35 +0200</pubDate>
+      
+      <guid>http://www.officegeek.dk/pivottabel_10_minutter/slicer/slicer/</guid>
+      <description> Tilføj det via højreklik Design - antal Brug det på flere PivotTabeller Multiselect  </description>
+    </item>
+    
+    <item>
+      <title>Excel dag 2</title>
+      <link>http://www.officegeek.dk/dtu/excel/02_excel/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/excel/02_excel/</guid>
+      <description>Opslagsfunktioner Excel har flere funktioner som du kan bruge til at finde værdier i et datasæt. De mest brugte er:
+ LOPSLAG - Søger i øverste række af en matrix og flytter på tværs af rækken for at returnere en celleværdi VOPSLAG - Søger i den øverste række af en matrix og returnerer værdien af den angivne celle INDEKS - Anvender et indeks til at vælge en værdi fra en reference eller en matrix SAMMENLIGN - Slår værdier op i en reference eller en matrix  LOPSLAG Brug LOPSLAG når du vil finde data i en tabel eller et område efter række værdier.</description>
+    </item>
+    
+    <item>
+      <title>Nye data</title>
+      <link>http://www.officegeek.dk/pivottabel_10_minutter/nyedata/nyedata/</link>
+      <pubDate>Thu, 23 Jul 2020 22:27:25 +0200</pubDate>
+      
+      <guid>http://www.officegeek.dk/pivottabel_10_minutter/nyedata/nyedata/</guid>
+      <description> Tilføj nye data  </description>
+    </item>
+    
+    <item>
+      <title>Excel dag 3</title>
+      <link>http://www.officegeek.dk/dtu/excel/03_excel/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/excel/03_excel/</guid>
+      <description>Dataanalyseværktøjer Excel har tre meget powerfulde dataanalyseværktøjer:
+ Power Pivot Hent og transformér (Power Query) Power View  Hente og transformere og Power Pivot i Excel
+Power Pivot Power Pivot er en datamodelleringsteknologi, der giver dig mulighed for at oprette datamodeller, etablere relationer og oprette beregninger. Med Power Pivot kan du arbejde med store datasæt, opbygge omfattende relationer og oprette komplekse (eller enkle) beregninger, alt sammen i et højtydende miljø med den vante brugeroplevelse i Excel.</description>
+    </item>
+    
+    <item>
+      <title>Excel AddIn</title>
+      <link>http://www.officegeek.dk/dtu/excel/excel_addin/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/excel/excel_addin/</guid>
+      <description>Der findes rigtig mange AddIn&amp;rsquo;s til Excel. Du kan finde dem indefra Excel i Microsoft Store som du finder under fanen Indsæt
+Excel Functions Translator Microsoft har lavet et Add-In der oversætter funktionsnavne mellem forskellige sprog. Hvilket kan være meget smart da der er forskeld på en funktions navn på dansk og på engelsk.
+Du henter denne Add-In på følgende måde:
+ Klik på fanen Indsæt Klik på knappen Hent tilføjelsesprogrammmer Søg efter: Functions Translator Klik på knappen Tilføj AddIn&amp;rsquo;en bliver sat ind i fanen Hjem længst ude til højre  Indstillinger Du kommer til Indstillinger ved at trykk epå det lille tandhjul i nederste højre hjørne.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Project</title>
+      <link>http://www.officegeek.dk/dtu/project/project/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/project/project/</guid>
+      <description>Microsoft har oprettet en vejledning der hjælper dig med at forstå projektstyring, mens du bruger Project.
+Projektstyring
+Ny projecktplan Oprette en ny projektplan
+Tilføje nye opgaver Din projeckt plan består af opgaver og det første du gør når du oprette en ny projeckt plan er at tilføje opagver i kronologisk orden. Tilføje nye opgaver
+Sammenkæd opagaver Opgavekæder (afhængigheder) viser relationen i tid mellem en opgave til en anden. Sammenkædning af opgaver skaber opgaveafhængigheder.</description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>http://www.officegeek.dk/dtu/database/database/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/database/database/</guid>
+      <description>De data du kommer til at abejde med vil i mange tilfælde ligge i en Database.
+Du kan enten tilgå dem direkte eller ved at data er eksporteret ud af databasen, f.eks. som en eller flere CSV filer.
+For at arbejde effektiv med data er det nøvendigt at forstå hvordan en database er opbytte - Hvordan de forskellige tabeller &amp;ldquo;hænger&amp;rdquo; sammen og hvordan man kan kominere data fra flere forskellige tabeller.</description>
+    </item>
+    
+    <item>
+      <title>VBA</title>
+      <link>http://www.officegeek.dk/dtu/vba/vba/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/vba/vba/</guid>
+      <description>VBA bruges rigtig meget i Excel og det er også i Excel du primært kommer til at bruge VBA.
+Microsoft har en Getting started with VBA in Office guide, den er på engelsk, men giver et rigtigt godt overblik.
+Getting started with VBA in Office
+Udvilker fanen Der er en ekstra fane du vil have glæde af når du arbejder med VBA i Excel - Udvikler (Developer).
+Du aktivere den på følgende måde:</description>
+    </item>
+    
+    <item>
+      <title>Opgaver</title>
+      <link>http://www.officegeek.dk/dtu/opgaver/opgaver/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/opgaver/opgaver/</guid>
+      <description>Du skal aflevere 4 opgaver, der alle skal godkendes for at bestå modulet.
+Opgave 1
+Opgave 2
+Opgave 3
+Opgave 4</description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>http://www.officegeek.dk/dtu/links/links/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>http://www.officegeek.dk/dtu/links/links/</guid>
+      <description>DTU giver jer adgang til Microsoft software gennem deres Education Hub - https://aka.ms/devtoolsforteaching Ved Microsoft’s login siden skriver du INITIALER/S-NUMMER@win.dtu.dk Siden vil derefter viderestille dig til DTU’s login side, hvor du logger på med dine DTU legitimationsoplysninger.
+Links relateret til undervisningen Der findes rigtig mange www sider der omhandler Microsoft Office programmerne og VBA programmering. De har alle typisk hver deres fordele. Jeg har her samlet nogle sider som jeg syntes godt om.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.officegeek.dk/outlookonlenote/outlook-og-onenote-projeckt-styring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.officegeek.dk/outlookonlenote/outlook-og-onenote-projeckt-styring/</guid>
+      <description>Outlook og OneNote projeckt styring Brug Outlook og OneNote til at styre dine mindere projekter.
+Transform Outlook in to a Project Management Tool Using One Note
+Link OneNote og Outlook </description>
+    </item>
+    
+    <item>
+      <title>VBA - Outlook opgaver til Excel</title>
+      <link>http://www.officegeek.dk/blog/eksporter-outlook-opgaver-til-excel-med-vba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.officegeek.dk/blog/eksporter-outlook-opgaver-til-excel-med-vba/</guid>
+      <description>En af de ting jeg syntes bedst om ved Microsoft Office pakken er det, at de enkelte programmer arbejder super godt sammen. Det er meget nemt gå fra det ene program til det andet, det er nemt at flytte data fra et program til et andet.
+Jeg styrer mine opgaver i Outlook, men nogle gange er det en fordel at have dem i Excel. Det kan være fordi de skal bruges i en anden sammenhæng f.</description>
+    </item>
+    
+  </channel>
+</rss>
