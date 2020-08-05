@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Online kurser i Microsoft Office programmerne">
   <meta name="author" content="Tue Hellstern">
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.74.2" />
 
   <!-- plugins -->
   
@@ -1250,7 +1250,7 @@
 <p>VBA er organisert i et logisk hieraki - <strong>Excel Object Model</strong>.
 Denne en <strong>meget</strong> stor model med mange niveauer og forgreninger. Hver <em>Object</em> indeholder typisk andre/nye objekter.</p>
 <p>Øverst er <strong>Application</strong> som repræsentere hele Excel applikationen. Den indeholder flere objekter, f.eks. <em>Workbook object</em> som indeholder <em>Worksheet object</em>, som indeholder flere andre objekter, f.eks. <em>Range object</em> og <em>PivotTable object</em>.</p>
-<p>Dette mønster fortsætter med at udfolde sig på en lignende måde, 
+<p>Dette mønster fortsætter med at udfolde sig på en lignende måde,
 indtil du støder på objekter, der ikke indeholder andre objekter.</p>
 <p><a href="https://docs.microsoft.com/en-us/office/vba/api/overview/excel/object-model">Object model - Excel</a></p>
 <h2 id="if">IF</h2>
@@ -1315,24 +1315,136 @@ Der er 2 hoved typer af Do-Loop. Udfør en Betingelse indtil denne er Opfyldt, e
     <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </code></pre></div><p><a href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/on-error-statement">Microsoft On Error Statement oversigt</a></p>
 <h2 id="andreprogrammer">AndreProgrammer</h2>
-<p>Alt efter hvilket Microsoft Office program du arbejder i vil det være muligt at åbne et andet Office program, f.eks. du har nogle diagrammer i Excel som du opdateret og derefter gerne vil overføre til PowerPoint - automatisk.</p>
+<p>Alt efter hvilket Microsoft Office program du arbejder i vil det være muligt at åbne et andet Office program, f.eks. du har nogle diagrammer i Excel som du opdateret og derefter gerne vil overføre til PowerPoint - <em>Automatisk</em>.</p>
 <h3 id="word">Word</h3>
-<ul>
-<li><strong>Åben Word</strong></li>
-<li><strong>Åben eksisterende dokument</strong></li>
-<li><strong>Opret nyt dokument</strong></li>
+<p>Det kan tit være en fordel at bruge Word til oprettelse af rapporter og lign.<br>
+Denne VBA kode vil virke uanset hvilken Word version du brugere og uden yderligere referencer, hvilket er en stor fordel når du opgradere til en ny Office version.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">AabenWord</span>()
+    <span style="color:#75715e">&#39; Variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> appWord <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+    
+    <span style="color:#75715e">&#39; Åben Word
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appWord <span style="color:#f92672">=</span> CreateObject(Class:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Word.Application&#34;</span>)
+
+    <span style="color:#75715e">&#39; Handlinger i Word
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">With</span> appWord
+        .Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#75715e">&#39; Vis Word
+</span><span style="color:#75715e"></span>        .Documents.Add  <span style="color:#75715e">&#39; Nyt dokument
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+
+    <span style="color:#75715e">&#39; Oprydning
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appWord <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nothing</span>
+
+<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</code></pre></div><h4 id="åben-eksisterende-dokument">Åben eksisterende dokument</h4>
+<p>Brug denne VBA kode til at åbne et eksisterende Word dokument.<br>
+Benærk at du skal angvie stien og filnavnet i variablen <em>WordFilePath</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">AabenWordDokument</span>()
+    <span style="color:#75715e">&#39; Variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> appWord <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+    <span style="color:#66d9ef">Dim</span> WordFilePath <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+    
+    <span style="color:#75715e">&#39; Åben Word
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appWord <span style="color:#f92672">=</span> CreateObject(Class:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Word.Application&#34;</span>)
+    
+    <span style="color:#75715e">&#39; Sti og filnavn på det dokument der skal åbnes
+</span><span style="color:#75715e"></span>    WordFilePath <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\Users\Tue Hellstern\Documents\SalgsBudget.docx&#34;</span>
+
+    <span style="color:#75715e">&#39; Handlinger i Word
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">With</span> appWord
+        .Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+        .Documents.Open Filename:<span style="color:#f92672">=</span>WordFilePath
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+    
+    <span style="color:#75715e">&#39; Oprydning
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appWord <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nothing</span>
+    
+<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</code></pre></div><p>Du kan læse mere om de muligheder der er i <em>Documents.Open</em> metoden her:<br>
+<a href="https://docs.microsoft.com/en-us/office/vba/api/word.documents.open">Documents.Open method (Word)</a></p>
+<h4 id="kopier-excel-tabel-til-word">Kopier Excel tabel til Word</h4>
+<p>Eksempel på hvordan du kopiere en Excel tabel til Word. Tabellen har navnet: <em>SalgsData</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">TabelWordDokument</span>()
+    <span style="color:#75715e">&#39; Variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> appWord <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+    <span style="color:#66d9ef">Dim</span> tbl <span style="color:#f92672">As</span> Excel.Range
+    <span style="color:#66d9ef">Dim</span> WordTable <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+    <span style="color:#66d9ef">Dim</span> WordFilePath <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+    
+    <span style="color:#75715e">&#39; Åben Word
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appWord <span style="color:#f92672">=</span> CreateObject(Class:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Word.Application&#34;</span>)
+    
+    <span style="color:#75715e">&#39; Sti og filnavn på det dokument der skal åbnes
+</span><span style="color:#75715e"></span>    WordFilePath <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\Users\Tue Hellstern\Documents\SalgsBudget.docx&#34;</span>
+    
+    <span style="color:#75715e">&#39; Tabellen der skal kopieres
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> tbl <span style="color:#f92672">=</span> ThisWorkbook.Worksheets(1).ListObjects(<span style="color:#e6db74">&#34;SalgsData&#34;</span>).Range
+    tbl.Copy
+
+    <span style="color:#75715e">&#39; Handlinger i Word
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">With</span> appWord
+        .Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+        .Documents.Open Filename:<span style="color:#f92672">=</span>WordFilePath
+        .Selection.PasteExcelTable _
+            LinkedToExcel:<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, WordFormatting:<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, RTF:<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span> <span style="color:#75715e">&#39; Indsæt Excel tabel
+</span><span style="color:#75715e"></span>        .ActiveDocument.Tables(1).AutoFitBehavior 1 <span style="color:#75715e">&#39; wdAutoFitWindow = 1
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+
+    <span style="color:#75715e">&#39; Oprydning
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appWord <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nothing</span>
+    Application.CutCopyMode <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+    
+<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</code></pre></div><ul>
+<li><a href="https://docs.microsoft.com/en-us/office/vba/api/word.selection.pasteexceltable">Selection.PasteExcelTable method (Word)</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word.wdautofitbehavior?view=word-pia">WdAutoFitBehavior Enum</a></li>
 </ul>
-<h3 id="excel">Excel</h3>
 <h3 id="powerpoint">PowerPoint</h3>
-<ul>
-<li><strong>Åben PowerPoint</strong></li>
-<li><strong>Åben eksisterende præsentation</strong></li>
-<li><strong>Opret ny præsentation</strong></li>
-<li><strong>Indsæt slide hvis der allerede er slides i dokumentet</strong></li>
-<li><strong>Indsæt slide i tomt dokument</strong></li>
-<li><strong>Indsæt shape på slide</strong></li>
-<li><strong>Vælg slide</strong></li>
+<p>Det er jo oplagt at oprette PowerPoint præsentatiomer baseret på data fra et Excel ark.</p>
+<h4 id="åben-powerpoint">Åben PowerPoint</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">AabenPowerPoint</span>()
+    <span style="color:#75715e">&#39; Variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> appPowerPoint <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+
+    <span style="color:#75715e">&#39; Åben PowerPoint
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appPowerPoint <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;PowerPoint.Application&#34;</span>)
+    
+    <span style="color:#75715e">&#39; Handlinger i PowerPoint
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">With</span> appPowerPoint
+        .Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+        .Presentations.Add
+        .ActivePresentation.Slides.Add 1, 1
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+
+<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</code></pre></div><ul>
+<li><a href="https://docs.microsoft.com/en-us/office/vba/api/powerpoint.slide.layout">Slide.Layout property (PowerPoint)</a></li>
 </ul>
+<h4 id="åben-eksisterende-præsentation">Åben eksisterende præsentation</h4>
+<p>Hvis du har en PowerPoint præsentation du vil åbne, kan du gøre det på denne måde.<br>
+Benærk at du skal angvie stien og filnavnet i variablen <em>PowerPointPress</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">AabenPowerPointPresentation</span>()
+    <span style="color:#75715e">&#39; Variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> appPowerPoint <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+    <span style="color:#66d9ef">Dim</span> PowerPointPress <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+
+    <span style="color:#75715e">&#39; Eksisterende PowerPoint præsentation
+</span><span style="color:#75715e"></span>    PowerPointPress <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:\Users\Tue Hellstern\Documents\Salgsdata.pptx&#34;</span>
+    
+    <span style="color:#75715e">&#39; Åben PowerPoint
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appPowerPoint <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;PowerPoint.Application&#34;</span>)
+    
+    <span style="color:#75715e">&#39; Handlinger i PowerPoint
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">With</span> appPowerPoint
+        .Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+        .Presentations.Open (PowerPointPress)
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+
+<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</code></pre></div><h4 id="indsæt-slide-hvis-der-allerede-er-slides-i-dokumentet">Indsæt slide hvis der allerede er slides i dokumentet</h4>
+<h4 id="indsæt-slide-i-tomt-dokument">Indsæt slide i tomt dokument</h4>
+<h4 id="indsæt-shape-på-slide">Indsæt shape på slide</h4>
+<h4 id="vælg-slide">Vælg slide</h4>
 <h2 id="sikkerhed">Sikkerhed</h2>
 <p>Du kan ændre indstillingerne for makrosikkerhed i Excel til at styre, hvilke makroer der køres, og under hvad omstændigheder, når du åbner en projektmappe.</p>
 <p><a href="https://support.office.com/da-dk/article/%C3%86ndre-indstillinger-for-makrosikkerhed-a97c09d2-c082-46b8-b19f-e8621e8fe373">Ændre indstillinger for makrosikkerhed</a></p>
