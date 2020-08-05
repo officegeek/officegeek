@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Online kurser i Microsoft Office programmerne">
   <meta name="author" content="Tue Hellstern">
-  <meta name="generator" content="Hugo 0.74.2" />
+  <meta name="generator" content="Hugo 0.74.3" />
 
   <!-- plugins -->
   
@@ -1250,7 +1250,7 @@
 <p>VBA er organisert i et logisk hieraki - <strong>Excel Object Model</strong>.
 Denne en <strong>meget</strong> stor model med mange niveauer og forgreninger. Hver <em>Object</em> indeholder typisk andre/nye objekter.</p>
 <p>Øverst er <strong>Application</strong> som repræsentere hele Excel applikationen. Den indeholder flere objekter, f.eks. <em>Workbook object</em> som indeholder <em>Worksheet object</em>, som indeholder flere andre objekter, f.eks. <em>Range object</em> og <em>PivotTable object</em>.</p>
-<p>Dette mønster fortsætter med at udfolde sig på en lignende måde,
+<p>Dette mønster fortsætter med at udfolde sig på en lignende måde, 
 indtil du støder på objekter, der ikke indeholder andre objekter.</p>
 <p><a href="https://docs.microsoft.com/en-us/office/vba/api/overview/excel/object-model">Object model - Excel</a></p>
 <h2 id="if">IF</h2>
@@ -1264,40 +1264,40 @@ indtil du støder på objekter, der ikke indeholder andre objekter.</p>
 <li>Do - Loop</li>
 </ul>
 <p>Ved et For-Next loop kender du antallet af gennemløb, det kan f.eks. være alle Ark i en Excel fil. Der er to typer af For-Next loop</p>
-<pre><code class="language-{vba}" data-lang="{vba}">    For variabel = a TO b
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet">    <span style="color:#66d9ef">For</span> variabel <span style="color:#f92672">=</span> a <span style="color:#66d9ef">TO</span> b
         VBA Kode
-    Next
+    <span style="color:#66d9ef">Next</span>
     
-    For Each Egenskab IN Objekt
+    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> Egenskab <span style="color:#f92672">IN</span> Objekt
         VBA Kode
-    Next
-</code></pre><p>Ved et Do-Loop udføres Loopet indtil en betingelse er opfyldt
+    <span style="color:#66d9ef">Next</span>
+</code></pre></div><p>Ved et Do-Loop udføres Loopet indtil en betingelse er opfyldt
 Der er 2 hoved typer af Do-Loop. Udfør en Betingelse indtil denne er Opfyldt, eller udfør loopet så længe betinelsen er sand. Du kan starte med at skrive Betingelsen eller du kan skrive Betingelsen til sidst i loopet.</p>
-<pre><code class="language-{vba}" data-lang="{vba}">    Do Until Betingelse
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet">    <span style="color:#66d9ef">Do</span> Until Betingelse
       VBA Kode
-    Loop
+    <span style="color:#66d9ef">Loop</span>
     
-    Do While Betingelse 
+    <span style="color:#66d9ef">Do</span> <span style="color:#66d9ef">While</span> Betingelse 
       VBA Kode 
-    Loop
+    <span style="color:#66d9ef">Loop</span>
     
-    Do
+    <span style="color:#66d9ef">Do</span>
       VBA Kode
-    Loop Until Betingelse
+    <span style="color:#66d9ef">Loop</span> Until Betingelse
 
-    Do
+    <span style="color:#66d9ef">Do</span>
       VBA Kode
-    Loop While Betingelse
-</code></pre><p>Hvis du har behov for at Stoppe/komme ud af et Loop før det er helt færdigt, kan du gøre det med denne kommando</p>
-<pre><code class="language-{vba}" data-lang="{vba}">    Exit do
+    <span style="color:#66d9ef">Loop</span> <span style="color:#66d9ef">While</span> Betingelse
+</code></pre></div><p>Hvis du har behov for at Stoppe/komme ud af et Loop før det er helt færdigt, kan du gøre det med denne kommando</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet">    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">do</span>
     
-' F.eks.
-    Do Until Betingelse
-      If Betingelse then
-          Exit Do
-      End If
-    Loop
-</code></pre><h2 id="fejlhåndtering">Fejlhåndtering</h2>
+<span style="color:#75715e">&#39; F.eks.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Do</span> Until Betingelse
+      <span style="color:#66d9ef">If</span> Betingelse <span style="color:#66d9ef">then</span>
+          <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Do</span>
+      <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+    <span style="color:#66d9ef">Loop</span>
+</code></pre></div><h2 id="fejlhåndtering">Fejlhåndtering</h2>
 <p>Der er forskellige typer af fejl i et program. Nogle fejl opstår fordi der er en fejl i programmeringen af programmet og nogle fejl opstår via brugeren, f.eks. ved en forkert indtastning.</p>
 <p>Error handling består af 3 &ldquo;kommandoer&rdquo;</p>
 <ol>
@@ -1305,15 +1305,15 @@ Der er 2 hoved typer af Do-Loop. Udfør en Betingelse indtil denne er Opfyldt, e
 <li>On Error Resume Next</li>
 <li>On Error GoTo 0</li>
 </ol>
-<pre><code class="language-{vba}" data-lang="{vba}">    Sub InitializeMatrix(Var1, Var2, Var3, Var4) 
-        On Error GoTo ErrorHandler 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet">    <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">InitializeMatrix</span>(Var1, Var2, Var3, Var4) 
+        <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> ErrorHandler 
              . . . 
-         Exit Sub 
+         <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">xx</span>
         ErrorHandler: 
              . . . 
-        Resume Next
-    End Sub
-</code></pre><p><a href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/on-error-statement">Microsoft On Error Statement oversigt</a></p>
+        <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</code></pre></div><p><a href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/on-error-statement">Microsoft On Error Statement oversigt</a></p>
 <h2 id="andreprogrammer">AndreProgrammer</h2>
 <p>Alt efter hvilket Microsoft Office program du arbejder i vil det være muligt at åbne et andet Office program, f.eks. du har nogle diagrammer i Excel som du opdateret og derefter gerne vil overføre til PowerPoint - automatisk.</p>
 <h3 id="word">Word</h3>
@@ -1338,33 +1338,33 @@ Der er 2 hoved typer af Do-Loop. Udfør en Betingelse indtil denne er Opfyldt, e
 <p><a href="https://support.office.com/da-dk/article/%C3%86ndre-indstillinger-for-makrosikkerhed-a97c09d2-c082-46b8-b19f-e8621e8fe373">Ændre indstillinger for makrosikkerhed</a></p>
 <h2 id="eksempler">Eksempler</h2>
 <p>Her kommer nogle kode eksempler</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java">Sub <span style="color:#a6e22e">DeleteBlankRows</span><span style="color:#f92672">()</span>
-    Dim Rw As Range
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">DeleteBlankRows</span>()
+    <span style="color:#66d9ef">Dim</span> Rw <span style="color:#f92672">As</span> Range
     
-    If WorksheetFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">CountA</span><span style="color:#f92672">(</span>Selection<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0 Then
-        MsgBox <span style="color:#e6db74">&#34;Der er ikke nogle blanke celler!&#34;</span><span style="color:#f92672">,</span> vbOKOnly
-        Exit Sub
-    End If
+    <span style="color:#66d9ef">If</span> WorksheetFunction.CountA(Selection) <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">Then</span>
+        MsgBox <span style="color:#e6db74">&#34;Der er ikke nogle blanke celler!&#34;</span>, vbOKOnly
+        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
     
-    With Application
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">Calculation</span> <span style="color:#f92672">=</span> xlCalculationManual
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">ScreenUpdating</span> <span style="color:#f92672">=</span> False
-    End With
+    <span style="color:#66d9ef">With</span> Application
+        .Calculation <span style="color:#f92672">=</span> xlCalculationManual
+        .ScreenUpdating <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
     
-    Selection<span style="color:#f92672">.</span><span style="color:#a6e22e">SpecialCells</span><span style="color:#f92672">(</span>xlCellTypeBlanks<span style="color:#f92672">).</span><span style="color:#a6e22e">Select</span>
-    For Each Rw In Selection<span style="color:#f92672">.</span><span style="color:#a6e22e">Rows</span>
-        If WorksheetFunction<span style="color:#f92672">.</span><span style="color:#a6e22e">CountA</span><span style="color:#f92672">(</span>Selection<span style="color:#f92672">.</span><span style="color:#a6e22e">EntireRow</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span> 0 Then
-            Selection<span style="color:#f92672">.</span><span style="color:#a6e22e">EntireRow</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Delete</span>
-        End If
-    Next Rw
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> Rw <span style="color:#f92672">In</span> Selection.Rows
+        <span style="color:#66d9ef">If</span> WorksheetFunction.CountA(Selection.EntireRow) <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">Then</span>
+            Selection.EntireRow.Delete
+        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+    <span style="color:#66d9ef">Next</span> Rw
 
-    With Application
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">Calculation</span> <span style="color:#f92672">=</span> xlCalculationAutomatic
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">ScreenUpdating</span> <span style="color:#f92672">=</span> True
-    End With
+    <span style="color:#66d9ef">With</span> Application
+        .Calculation <span style="color:#f92672">=</span> xlCalculationAutomatic
+        .ScreenUpdating <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
     
     MsgBox <span style="color:#e6db74">&#34;Blanke rækker fjernet&#34;</span>
-End Sub
+<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </code></pre></div></div>
           
           <nav class="pagination">

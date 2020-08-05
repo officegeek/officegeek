@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Bruf VBA til at eksportere opgaver fra Outlook til Excel">
   <meta name="author" content="Tue Hellstern">
-  <meta name="generator" content="Hugo 0.74.2" />
+  <meta name="generator" content="Hugo 0.74.3" />
 
   <!-- plugins -->
   
@@ -1159,7 +1159,6 @@
           <div class="content"><p>En af de ting jeg syntes bedst om ved Microsoft Office pakken er det, at de enkelte programmer arbejder super godt sammen. Det er meget nemt gå fra det ene program til det andet, det er nemt at flytte data fra et program til et andet.</p>
 <p>Jeg styrer mine opgaver i Outlook, men nogle gange er det en fordel at have dem i Excel. Det kan være fordi de skal bruges i en anden sammenhæng f.eks. i Word eller PowerPoint.
 For nemt at eksportere opgaverne fra Outlook til Excel har jeg oprette en makro der gør det for mig.</p>
-<p>{{.TableOfContents}}</p>
 <h3 id="outlook-indstillinger">Outlook indstillinger</h3>
 <p>Når du arbejder med VBA i Outlook er det en fordel at have aktiveret fanen &ldquo;Udvikler&rdquo;</p>
 <p><strong>Det gør du på denne måde:</strong></p>
@@ -1182,97 +1181,97 @@ Nummeret er afhængiet af din Office version</li>
 <h3 id="opret-makroen">Opret makroen</h3>
 <p>djksfhjksd</p>
 <h3 id="vba-koden">VBA koden</h3>
-<pre><code class="language-{vba}" data-lang="{vba}">Sub EksportOpgaverExcel()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbnet" data-lang="vbnet"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">EksportOpgaverExcel</span>()
 
-' Variabler
-    ' Find Dokumenet mappen - Variable
-    Dim MyShell As Object
-    Dim DocumentFolder As String
+<span style="color:#75715e">&#39; Variabler
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">&#39; Find Dokumenet mappen - Variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> MyShell <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+    <span style="color:#66d9ef">Dim</span> DocumentFolder <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
     
-    ' Outlook - Variable
-    Dim olnameSpace As Outlook.NameSpace
-    Dim taskFolder As Outlook.MAPIFolder
-    Dim tasks As Outlook.Items
-    Dim task As Outlook.TaskItem
+    <span style="color:#75715e">&#39; Outlook - Variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> olnameSpace <span style="color:#f92672">As</span> Outlook.NameSpace
+    <span style="color:#66d9ef">Dim</span> taskFolder <span style="color:#f92672">As</span> Outlook.MAPIFolder
+    <span style="color:#66d9ef">Dim</span> tasks <span style="color:#f92672">As</span> Outlook.Items
+    <span style="color:#66d9ef">Dim</span> task <span style="color:#f92672">As</span> Outlook.TaskItem
     
-    ' Excel - Variable
-    Dim appExcel As New Excel.Application
-    Dim fileExcel As Excel.Workbook
-    Dim fileNavn As String
-    Dim FindesExcelFilen As Boolean
+    <span style="color:#75715e">&#39; Excel - Variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> appExcel <span style="color:#f92672">As</span> <span style="color:#66d9ef">New</span> Excel.Application
+    <span style="color:#66d9ef">Dim</span> fileExcel <span style="color:#f92672">As</span> Excel.Workbook
+    <span style="color:#66d9ef">Dim</span> fileNavn <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+    <span style="color:#66d9ef">Dim</span> FindesExcelFilen <span style="color:#f92672">As</span> <span style="color:#66d9ef">Boolean</span>
     
-    ' Gennemløb variable
-    Dim i As Integer
-    Dim n As Integer
-    n = 2 ' Start Row
+    <span style="color:#75715e">&#39; Gennemløb variable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+    <span style="color:#66d9ef">Dim</span> n <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+    n <span style="color:#f92672">=</span> 2 <span style="color:#75715e">&#39; Start Row
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">&#39; Find Dokument mappen
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> MyShell <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;WScript.Shell&#34;</span>)
+    DocumentFolder <span style="color:#f92672">=</span> MyShell.SpecialFolders(<span style="color:#e6db74">&#34;MyDocuments&#34;</span>)
     
-    ' Find Dokument mappen
-    Set MyShell = CreateObject(&quot;WScript.Shell&quot;)
-    DocumentFolder = MyShell.SpecialFolders(&quot;MyDocuments&quot;)
     
+    <span style="color:#75715e">&#39; Opret Excel filen
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> appExcel <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;Excel.Application&#34;</span>)
+    <span style="color:#75715e">&#39; appExcel.Visible = True
+</span><span style="color:#75715e"></span>    fileNavn <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MineOpgaver.xlsx&#34;</span>
     
-    ' Opret Excel filen
-    Set appExcel = CreateObject(&quot;Excel.Application&quot;)
-    ' appExcel.Visible = True
-    fileNavn = &quot;MineOpgaver.xlsx&quot;
+    <span style="color:#75715e">&#39; Findes filen?
+</span><span style="color:#75715e"></span>    FindesExcelFilen <span style="color:#f92672">=</span> Dir(DocumentFolder <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\&#34;</span> <span style="color:#f92672">&amp;</span> fileNavn) <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;&#34;</span>
     
-    ' Findes filen?
-    FindesExcelFilen = Dir(DocumentFolder &amp; &quot;\&quot; &amp; fileNavn) &gt; &quot;&quot;
-    
-    If FindesExcelFilen Then
-        ' Åben Excel filen
-        Set fileExcel = appExcel.Workbooks.Open(DocumentFolder &amp; &quot;\MineOpgaver.xlsx&quot;)
-    Else
-        ' Opret Excel filen
-        Set fileExcel = appExcel.Workbooks.Add
-        fileExcel.SaveAs FileName:=DocumentFolder &amp; &quot;\&quot; &amp; fileNavn
-    End If
+    <span style="color:#66d9ef">If</span> FindesExcelFilen <span style="color:#66d9ef">Then</span>
+        <span style="color:#75715e">&#39; Åben Excel filen
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">Set</span> fileExcel <span style="color:#f92672">=</span> appExcel.Workbooks.Open(DocumentFolder <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\MineOpgaver.xlsx&#34;</span>)
+    <span style="color:#66d9ef">Else</span>
+        <span style="color:#75715e">&#39; Opret Excel filen
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">Set</span> fileExcel <span style="color:#f92672">=</span> appExcel.Workbooks.Add
+        fileExcel.SaveAs FileName:<span style="color:#f92672">=</span>DocumentFolder <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\&#34;</span> <span style="color:#f92672">&amp;</span> fileNavn
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 
-    ' Outlook mapper
-    Set olnameSpace = Application.GetNamespace(&quot;MAPI&quot;)
-    Set taskFolder = olnameSpace.GetDefaultFolder(olFolderTasks)
-    Set tasks = taskFolder.Items
+    <span style="color:#75715e">&#39; Outlook mapper
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Set</span> olnameSpace <span style="color:#f92672">=</span> Application.GetNamespace(<span style="color:#e6db74">&#34;MAPI&#34;</span>)
+    <span style="color:#66d9ef">Set</span> taskFolder <span style="color:#f92672">=</span> olnameSpace.GetDefaultFolder(olFolderTasks)
+    <span style="color:#66d9ef">Set</span> tasks <span style="color:#f92672">=</span> taskFolder.Items
 
-    ' Opret overskrifter i Excel
-    With fileExcel.Sheets(1)
-        .Range(&quot;A1&quot;).Value = &quot;Emne&quot;
-        .Range(&quot;B1&quot;).Value = &quot;Forfaldsdato&quot;
-        .Range(&quot;C1&quot;).Value = &quot;Pct. fuldført&quot;
-        .Range(&quot;D1&quot;).Value = &quot;Status&quot;
-    End With
+    <span style="color:#75715e">&#39; Opret overskrifter i Excel
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">With</span> fileExcel.Sheets(1)
+        .Range(<span style="color:#e6db74">&#34;A1&#34;</span>).Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Emne&#34;</span>
+        .Range(<span style="color:#e6db74">&#34;B1&#34;</span>).Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Forfaldsdato&#34;</span>
+        .Range(<span style="color:#e6db74">&#34;C1&#34;</span>).Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Pct. fuldført&#34;</span>
+        .Range(<span style="color:#e6db74">&#34;D1&#34;</span>).Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Status&#34;</span>
+    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
     
-    ' Eksport af opgaver
-    For i = 1 To tasks.Count ' Gennemløb af dine opgaver
+    <span style="color:#75715e">&#39; Eksport af opgaver
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> tasks.Count <span style="color:#75715e">&#39; Gennemløb af dine opgaver
+</span><span style="color:#75715e"></span>
+        <span style="color:#66d9ef">Set</span> task <span style="color:#f92672">=</span> tasks.Item(i)
 
-        Set task = tasks.Item(i)
-
-        If Not task.Complete Then
-            With fileExcel.Sheets(1)
-                .Range(&quot;A&quot; &amp; n).Value = task.Subject
-                .Range(&quot;B&quot; &amp; n).Value = task.DueDate
-                .Range(&quot;C&quot; &amp; n).Value = task.PercentComplete
-                .Range(&quot;D&quot; &amp; n).Value = task.Status
-            End With
+        <span style="color:#66d9ef">If</span> <span style="color:#66d9ef">Not</span> task.Complete <span style="color:#66d9ef">Then</span>
+            <span style="color:#66d9ef">With</span> fileExcel.Sheets(1)
+                .Range(<span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">&amp;</span> n).Value <span style="color:#f92672">=</span> task.Subject
+                .Range(<span style="color:#e6db74">&#34;B&#34;</span> <span style="color:#f92672">&amp;</span> n).Value <span style="color:#f92672">=</span> task.DueDate
+                .Range(<span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#f92672">&amp;</span> n).Value <span style="color:#f92672">=</span> task.PercentComplete
+                .Range(<span style="color:#e6db74">&#34;D&#34;</span> <span style="color:#f92672">&amp;</span> n).Value <span style="color:#f92672">=</span> task.Status
+            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
             
-            n = n + 1
-        End If
+            n <span style="color:#f92672">=</span> n <span style="color:#f92672">+</span> 1
+        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 
-    Next i
+    <span style="color:#66d9ef">Next</span> i
     
-    ' Autofit kolonner
-    fileExcel.Sheets(1).Columns(&quot;A:D&quot;).AutoFit
+    <span style="color:#75715e">&#39; Autofit kolonner
+</span><span style="color:#75715e"></span>    fileExcel.Sheets(1).Columns(<span style="color:#e6db74">&#34;A:D&#34;</span>).AutoFit
     
-    ' Gem
-    fileExcel.Save
+    <span style="color:#75715e">&#39; Gem
+</span><span style="color:#75715e"></span>    fileExcel.Save
     
-    ' Oprydning
-    fileExcel.Close
-    Set fileExcel = Nothing
+    <span style="color:#75715e">&#39; Oprydning
+</span><span style="color:#75715e"></span>    fileExcel.Close
+    <span style="color:#66d9ef">Set</span> fileExcel <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nothing</span>
     appExcel.Quit
     
-End Sub
+<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 
-</code></pre></div>
+</code></pre></div></div>
           
           <nav class="pagination">
             

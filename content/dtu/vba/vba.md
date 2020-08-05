@@ -133,7 +133,7 @@ VBA har flere forskellige typer af løkker som kan opdelse i to grupper:
 
 Ved et For-Next loop kender du antallet af gennemløb, det kan f.eks. være alle Ark i en Excel fil. Der er to typer af For-Next loop
 
-```{vba}
+```vbnet
     For variabel = a TO b
         VBA Kode
     Next
@@ -146,7 +146,7 @@ Ved et For-Next loop kender du antallet af gennemløb, det kan f.eks. være alle
 Ved et Do-Loop udføres Loopet indtil en betingelse er opfyldt
 Der er 2 hoved typer af Do-Loop. Udfør en Betingelse indtil denne er Opfyldt, eller udfør loopet så længe betinelsen er sand. Du kan starte med at skrive Betingelsen eller du kan skrive Betingelsen til sidst i loopet.
 
-```{vba}
+```vbnet
     Do Until Betingelse
       VBA Kode
     Loop
@@ -166,7 +166,7 @@ Der er 2 hoved typer af Do-Loop. Udfør en Betingelse indtil denne er Opfyldt, e
 
 Hvis du har behov for at Stoppe/komme ud af et Loop før det er helt færdigt, kan du gøre det med denne kommando
 
-```{vba}
+```vbnet
     Exit do
     
 ' F.eks.
@@ -185,11 +185,11 @@ Error handling består af 3 "kommandoer"
 2. On Error Resume Next
 3. On Error GoTo 0
 
-```{vba}
+```vbnet
     Sub InitializeMatrix(Var1, Var2, Var3, Var4) 
         On Error GoTo ErrorHandler 
              . . . 
-         Exit Sub 
+         Exit Sub xx
         ErrorHandler: 
              . . . 
         Resume Next
@@ -224,7 +224,7 @@ Du kan ændre indstillingerne for makrosikkerhed i Excel til at styre, hvilke ma
 ## Eksempler
 Her kommer nogle kode eksempler
 
-```Java
+```vbnet
 Sub DeleteBlankRows()
     Dim Rw As Range
     

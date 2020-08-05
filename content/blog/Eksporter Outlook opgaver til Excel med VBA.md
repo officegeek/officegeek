@@ -13,7 +13,6 @@ En af de ting jeg syntes bedst om ved Microsoft Office pakken er det, at de enke
 Jeg styrer mine opgaver i Outlook, men nogle gange er det en fordel at have dem i Excel. Det kan være fordi de skal bruges i en anden sammenhæng f.eks. i Word eller PowerPoint.
 For nemt at eksportere opgaverne fra Outlook til Excel har jeg oprette en makro der gør det for mig.
 
-{{.TableOfContents}}
 
 ### Outlook indstillinger
 Når du arbejder med VBA i Outlook er det en fordel at have aktiveret fanen "Udvikler"
@@ -40,7 +39,7 @@ Nummeret er afhængiet af din Office version
 djksfhjksd
 
 ### VBA koden
-```{vba}
+```vbnet
 Sub EksportOpgaverExcel()
 
 ' Variabler
