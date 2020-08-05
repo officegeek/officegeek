@@ -198,23 +198,158 @@ Error handling består af 3 "kommandoer"
 [Microsoft On Error Statement oversigt](https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/on-error-statement)
 
 ## AndreProgrammer
-Alt efter hvilket Microsoft Office program du arbejder i vil det være muligt at åbne et andet Office program, f.eks. du har nogle diagrammer i Excel som du opdateret og derefter gerne vil overføre til PowerPoint - automatisk.
+Alt efter hvilket Microsoft Office program du arbejder i vil det være muligt at åbne et andet Office program, f.eks. du har nogle diagrammer i Excel som du opdateret og derefter gerne vil overføre til PowerPoint - *Automatisk*.
 
 ### Word
-- **Åben Word**
-- **Åben eksisterende dokument**
-- **Opret nyt dokument**
 
-### Excel
+Det kan tit være en fordel at bruge Word til oprettelse af rapporter og lign.  
+Denne VBA kode vil virke uanset hvilken Word version du brugere og uden yderligere referencer, hvilket er en stor fordel når du opgradere til en ny Office version.
+
+```vbnet
+Sub AabenWord()
+    ' Variable
+    Dim appWord As Object
+    
+    ' Åben Word
+    Set appWord = CreateObject(Class:="Word.Application")
+
+    ' Handlinger i Word
+    With appWord
+        .Visible = True ' Vis Word
+        .Documents.Add  ' Nyt dokument
+    End With
+
+    ' Oprydning
+    Set appWord = Nothing
+
+End Sub
+```
+
+#### Åben eksisterende dokument
+
+Brug denne VBA kode til at åbne et eksisterende Word dokument.  
+Benærk at du skal angvie stien og filnavnet i variablen *WordFilePath*
+
+```vbnet
+Sub AabenWordDokument()
+    ' Variable
+    Dim appWord As Object
+    Dim WordFilePath As String
+    
+    ' Åben Word
+    Set appWord = CreateObject(Class:="Word.Application")
+    
+    ' Sti og filnavn på det dokument der skal åbnes
+    WordFilePath = "C:\Users\Tue Hellstern\Documents\SalgsBudget.docx"
+
+    ' Handlinger i Word
+    With appWord
+        .Visible = True
+        .Documents.Open Filename:=WordFilePath
+    End With
+    
+    ' Oprydning
+    Set appWord = Nothing
+    
+End Sub
+```
+Du kan læse mere om de muligheder der er i *Documents.Open* metoden her:  
+[Documents.Open method (Word)](https://docs.microsoft.com/en-us/office/vba/api/word.documents.open)
+
+#### Kopier Excel tabel til Word
+Eksempel på hvordan du kopiere en Excel tabel til Word. Tabellen har navnet: *SalgsData*.
+
+```vbnet
+Sub TabelWordDokument()
+    ' Variable
+    Dim appWord As Object
+    Dim tbl As Excel.Range
+    Dim WordTable As Object
+    Dim WordFilePath As String
+    
+    ' Åben Word
+    Set appWord = CreateObject(Class:="Word.Application")
+    
+    ' Sti og filnavn på det dokument der skal åbnes
+    WordFilePath = "C:\Users\Tue Hellstern\Documents\SalgsBudget.docx"
+    
+    ' Tabellen der skal kopieres
+    Set tbl = ThisWorkbook.Worksheets(1).ListObjects("SalgsData").Range
+    tbl.Copy
+
+    ' Handlinger i Word
+    With appWord
+        .Visible = True
+        .Documents.Open Filename:=WordFilePath
+        .Selection.PasteExcelTable _
+            LinkedToExcel:=False, WordFormatting:=False, RTF:=False ' Indsæt Excel tabel
+        .ActiveDocument.Tables(1).AutoFitBehavior 1 ' wdAutoFitWindow = 1
+    End With
+
+    ' Oprydning
+    Set appWord = Nothing
+    Application.CutCopyMode = False
+    
+End Sub
+```
+
+* [Selection.PasteExcelTable method (Word)](https://docs.microsoft.com/en-us/office/vba/api/word.selection.pasteexceltable)
+* [WdAutoFitBehavior Enum](https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word.wdautofitbehavior?view=word-pia)
 
 ### PowerPoint
-- **Åben PowerPoint**
-- **Åben eksisterende præsentation**
-- **Opret ny præsentation**
-- **Indsæt slide hvis der allerede er slides i dokumentet**
-- **Indsæt slide i tomt dokument**
-- **Indsæt shape på slide**
-- **Vælg slide**
+Det er jo oplagt at oprette PowerPoint præsentatiomer baseret på data fra et Excel ark.
+
+#### Åben PowerPoint
+
+```vbnet
+Sub AabenPowerPoint()
+    ' Variable
+    Dim appPowerPoint As Object
+
+    ' Åben PowerPoint
+    Set appPowerPoint = CreateObject("PowerPoint.Application")
+    
+    ' Handlinger i PowerPoint
+    With appPowerPoint
+        .Visible = True
+        .Presentations.Add
+        .ActivePresentation.Slides.Add 1, 1
+    End With
+
+End Sub
+```
+
+* [Slide.Layout property (PowerPoint)](https://docs.microsoft.com/en-us/office/vba/api/powerpoint.slide.layout)
+
+#### Åben eksisterende præsentation
+Hvis du har en PowerPoint præsentation du vil åbne, kan du gøre det på denne måde.  
+Benærk at du skal angvie stien og filnavnet i variablen *PowerPointPress*
+
+```vbnet
+Sub AabenPowerPointPresentation()
+    ' Variable
+    Dim appPowerPoint As Object
+    Dim PowerPointPress As String
+
+    ' Eksisterende PowerPoint præsentation
+    PowerPointPress = "C:\Users\Tue Hellstern\Documents\Salgsdata.pptx"
+    
+    ' Åben PowerPoint
+    Set appPowerPoint = CreateObject("PowerPoint.Application")
+    
+    ' Handlinger i PowerPoint
+    With appPowerPoint
+        .Visible = True
+        .Presentations.Open (PowerPointPress)
+    End With
+
+End Sub
+```
+
+#### Indsæt slide hvis der allerede er slides i dokumentet
+#### Indsæt slide i tomt dokument
+#### Indsæt shape på slide
+#### Vælg slide
 
 ## Sikkerhed
 Du kan ændre indstillingerne for makrosikkerhed i Excel til at styre, hvilke makroer der køres, og under hvad omstændigheder, når du åbner en projektmappe.
