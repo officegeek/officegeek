@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Power_bi_intros on OfficeGeek</title>
+    <link>https://officegeek.dk/power_bi_intro/</link>
+    <description>Recent content in Power_bi_intros on OfficeGeek</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>da-dk</language>
+    <copyright>OfficeGeek.dk</copyright>
+    
+	<atom:link href="https://officegeek.dk/power_bi_intro/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://officegeek.dk/power_bi_intro/power_bi_intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://officegeek.dk/power_bi_intro/power_bi_intro/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

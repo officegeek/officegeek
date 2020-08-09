@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Gantt diagram i Excel</title>
+      <link>https://officegeek.dk/blog/gantt-diagram-i-excel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://officegeek.dk/blog/gantt-diagram-i-excel/</guid>
+      <description>Gantt diagrammer er meget nyttige når du vil visualisere et projekts tidslinje. Microsoft Project er et super program til at oprette Gantt diagrammer, men det kan godt være lidt for omfattende i forhold til dit behov.
+Her kommer jeg med et bud på hvordan du kan oprette et interaktivt Gantt diagram i Excel.
+Data Jeg har 6 koloner med data:
+ Faser Aktivitet Ansvarlig StartDato Antal Arbejdsdage SlutDato  Du kan fjerne eller tilføje ekstra kolonner, så det passer til dit behov.</description>
+    </item>
+    
+    <item>
       <title>VBA - Outlook opgaver til Excel</title>
       <link>https://officegeek.dk/blog/eksporter-outlook-opgaver-til-excel-med-vba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

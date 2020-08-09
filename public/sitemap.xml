@@ -153,7 +153,7 @@
   </url>
   
   <url>
-    <loc>https://officegeek.dk/dtu/excel/excel_addin/</loc>
+    <loc>https://officegeek.dk/dtu/excel/gantt_diagram_i_excel/</loc>
     <lastmod>2018-12-29T11:02:05+06:00</lastmod>
   </url>
   
@@ -169,6 +169,11 @@
   
   <url>
     <loc>https://officegeek.dk/theme-facility/windows/</loc>
+    <lastmod>2018-12-29T11:02:05+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://officegeek.dk/dtu/excel/excel_addin/</loc>
     <lastmod>2018-12-29T11:02:05+06:00</lastmod>
   </url>
   
@@ -238,7 +243,11 @@
   </url>
   
   <url>
-    <loc>https://officegeek.dk/outlookonlenote/outlook-og-onenote-projeckt-styring/</loc>
+    <loc>https://officegeek.dk/outlookonenote/outlook-og-onenote-projeckt-styring/</loc>
+  </url>
+  
+  <url>
+    <loc>https://officegeek.dk/power_bi_intro/power_bi_intro/</loc>
   </url>
   
   <url>
@@ -250,7 +259,15 @@
   </url>
   
   <url>
-    <loc>https://officegeek.dk/outlookonlenote/</loc>
+    <loc>https://officegeek.dk/blog/gantt-diagram-i-excel/</loc>
+  </url>
+  
+  <url>
+    <loc>https://officegeek.dk/outlookonenote/</loc>
+  </url>
+  
+  <url>
+    <loc>https://officegeek.dk/power_bi_intro/</loc>
   </url>
   
   <url>

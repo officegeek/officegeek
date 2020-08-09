@@ -114,6 +114,15 @@ Power Pivot Power Pivot er en datamodelleringsteknologi, der giver dig mulighed 
     </item>
     
     <item>
+      <title>Gantt diagram i Excel</title>
+      <link>https://officegeek.dk/dtu/excel/gantt_diagram_i_excel/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>https://officegeek.dk/dtu/excel/gantt_diagram_i_excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Excel AddIn</title>
       <link>https://officegeek.dk/dtu/excel/excel_addin/</link>
       <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
@@ -187,13 +196,34 @@ Links relateret til undervisningen Der findes rigtig mange www sider der omhandl
     
     <item>
       <title></title>
-      <link>https://officegeek.dk/outlookonlenote/outlook-og-onenote-projeckt-styring/</link>
+      <link>https://officegeek.dk/outlookonenote/outlook-og-onenote-projeckt-styring/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://officegeek.dk/outlookonlenote/outlook-og-onenote-projeckt-styring/</guid>
+      <guid>https://officegeek.dk/outlookonenote/outlook-og-onenote-projeckt-styring/</guid>
       <description>Outlook og OneNote projeckt styring Brug Outlook og OneNote til at styre dine mindere projekter.
 Transform Outlook in to a Project Management Tool Using One Note
 Link OneNote og Outlook </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://officegeek.dk/power_bi_intro/power_bi_intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://officegeek.dk/power_bi_intro/power_bi_intro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gantt diagram i Excel</title>
+      <link>https://officegeek.dk/blog/gantt-diagram-i-excel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://officegeek.dk/blog/gantt-diagram-i-excel/</guid>
+      <description>Gantt diagrammer er meget nyttige når du vil visualisere et projekts tidslinje. Microsoft Project er et super program til at oprette Gantt diagrammer, men det kan godt være lidt for omfattende i forhold til dit behov.
+Her kommer jeg med et bud på hvordan du kan oprette et interaktivt Gantt diagram i Excel.
+Data Jeg har 6 koloner med data:
+ Faser Aktivitet Ansvarlig StartDato Antal Arbejdsdage SlutDato  Du kan fjerne eller tilføje ekstra kolonner, så det passer til dit behov.</description>
     </item>
     
     <item>

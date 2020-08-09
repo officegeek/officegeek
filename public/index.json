@@ -180,10 +180,10 @@
     "content": "Heading example Here is example of hedings. You can use this heading by following markdownify rules. For example: use # for heading 1 and use ###### for heading 6.\nHeading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 \rEmphasis Emphasis, aka italics, with asterisks or underscores.\nStrong emphasis, aka bold, with asterisks or underscores.\nCombined emphasis with asterisks and underscores.\nStrikethrough uses two tildes. Scratch this.\n\rLink I\u0026rsquo;m an inline-style link\nI\u0026rsquo;m an inline-style link with title\nI\u0026rsquo;m a reference-style link\nI\u0026rsquo;m a relative reference to a repository file\nYou can use numbers for reference-style link definitions\nOr leave it empty and use the link text itself.\nURLs and URLs in angle brackets will automatically get turned into links. http://www.example.com or http://www.example.com and sometimes example.com (but not on Github, for example).\nSome text to show that the reference links can follow later.\n\rParagraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.\n\rOrdered List  List item List item List item List item List item  \rUnordered List  List item List item List item List item List item  \rNotice This is a simple note.\n\rThis is a simple tip.\n\rThis is a simple info.\n\r\rTab \rThis is first tab\r\rthis is second tab\r\rthis is third tab\r\r\r \rCollapse collapse 1 \r\rThis is a simple collapse\r collapse 2 \r\rThis is a simple collapse\r collapse 3 \r\rThis is a simple collapse\r \rCode and Syntax Highlighting Inline code has back-ticks around it.\nvar s = \u0026#34;JavaScript syntax highlighting\u0026#34;; alert(s); s = \u0026#34;Python syntax highlighting\u0026#34; print s No language indicated, so no syntax highlighting. But let's throw in a \u0026lt;b\u0026gt;tag\u0026lt;/b\u0026gt;.\r\rBlockquote  This is a blockquote example.\n \rInline HTML You can also use raw HTML in your Markdown, and it\u0026rsquo;ll mostly work pretty well.\n\rDefinition list\rIs something people use sometimes.\rMarkdown in HTML\rDoes *not* work **very** well. Use HTML tags.\r\r\rTables Colons can be used to align columns.\n   Tables Are Cool     col 3 is right-aligned $1600   col 2 is centered $12   zebra stripes are neat $1    There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don\u0026rsquo;t need to make the raw Markdown line up prettily. You can also use inline Markdown.\n   Markdown Less Pretty     Still renders nicely   1 2 3    \rImage \rYoutube video   "
   },
   {
-    "url": "https://officegeek.dk/dtu/excel/excel_addin/",
-    "title": "Excel AddIn",
+    "url": "https://officegeek.dk/dtu/excel/gantt_diagram_i_excel/",
+    "title": "Gantt diagram i Excel",
     "description": "",
-    "content": "Der findes rigtig mange AddIn\u0026rsquo;s til Excel. Du kan finde dem indefra Excel i Microsoft Store som du finder under fanen Indsæt\nExcel Functions Translator Microsoft har lavet et Add-In der oversætter funktionsnavne mellem forskellige sprog. Hvilket kan være meget smart da der er forskeld på en funktions navn på dansk og på engelsk.\nDu henter denne Add-In på følgende måde:\n Klik på fanen Indsæt Klik på knappen Hent tilføjelsesprogrammmer Søg efter: Functions Translator Klik på knappen Tilføj AddIn\u0026rsquo;en bliver sat ind i fanen Hjem længst ude til højre  Indstillinger Du kommer til Indstillinger ved at trykk epå det lille tandhjul i nederste højre hjørne. Her kan du vælge hvilk esprog der skal oversættes imellem, f.eks. Dansk og Engelsk.\nReference Giver dig mulighed for at vælge en Funktionskategori og se oversættelsen af de forskellige funktioner i denne kategori.\nOrdbog Med ordbogen kan du søge efter en vilkårlig del af funktionsnavnet på begge sprog du har valgt.\nOversætter Her kan du skrive en komplet formel og få den oversat, f.eks.\n=if(a2\u0026lt;4,\u0026ldquo;Lille\u0026rdquo;, \u0026ldquo;Stor\u0026rdquo;) bliver til =HVIS(a2\u0026lt;4;\u0026ldquo;Lille\u0026rdquo;;\u0026ldquo;Stor\u0026rdquo;)\nBemærk at den også oversætter afgrænser her er det , der bliver til ;\n"
+    "content": ""
   },
   {
     "url": "https://officegeek.dk/excel/test/",
@@ -202,6 +202,12 @@
     "title": "Windows",
     "description": "",
     "content": "Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.\n Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet\n Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.\n"
+  },
+  {
+    "url": "https://officegeek.dk/dtu/excel/excel_addin/",
+    "title": "Excel AddIn",
+    "description": "",
+    "content": "Der findes rigtig mange AddIn\u0026rsquo;s til Excel. Du kan finde dem indefra Excel i Microsoft Store som du finder under fanen Indsæt\nExcel Functions Translator Microsoft har lavet et Add-In der oversætter funktionsnavne mellem forskellige sprog. Hvilket kan være meget smart da der er forskeld på en funktions navn på dansk og på engelsk.\nDu henter denne Add-In på følgende måde:\n Klik på fanen Indsæt Klik på knappen Hent tilføjelsesprogrammmer Søg efter: Functions Translator Klik på knappen Tilføj AddIn\u0026rsquo;en bliver sat ind i fanen Hjem længst ude til højre  Indstillinger Du kommer til Indstillinger ved at trykk epå det lille tandhjul i nederste højre hjørne. Her kan du vælge hvilk esprog der skal oversættes imellem, f.eks. Dansk og Engelsk.\nReference Giver dig mulighed for at vælge en Funktionskategori og se oversættelsen af de forskellige funktioner i denne kategori.\nOrdbog Med ordbogen kan du søge efter en vilkårlig del af funktionsnavnet på begge sprog du har valgt.\nOversætter Her kan du skrive en komplet formel og få den oversat, f.eks.\n=if(a2\u0026lt;4,\u0026ldquo;Lille\u0026rdquo;, \u0026ldquo;Stor\u0026rdquo;) bliver til =HVIS(a2\u0026lt;4;\u0026ldquo;Lille\u0026rdquo;;\u0026ldquo;Stor\u0026rdquo;)\nBemærk at den også oversætter afgrænser her er det , der bliver til ;\n"
   },
   {
     "url": "https://officegeek.dk/dtu/project/project/",
@@ -282,10 +288,16 @@
     "content": ""
   },
   {
-    "url": "https://officegeek.dk/outlookonlenote/outlook-og-onenote-projeckt-styring/",
+    "url": "https://officegeek.dk/outlookonenote/outlook-og-onenote-projeckt-styring/",
     "title": "",
     "description": "",
     "content": "Outlook og OneNote projeckt styring Brug Outlook og OneNote til at styre dine mindere projekter.\nTransform Outlook in to a Project Management Tool Using One Note\nLink OneNote og Outlook "
+  },
+  {
+    "url": "https://officegeek.dk/power_bi_intro/power_bi_intro/",
+    "title": "",
+    "description": "",
+    "content": ""
   },
   {
     "url": "https://officegeek.dk/blog/",
@@ -300,8 +312,20 @@
     "content": ""
   },
   {
-    "url": "https://officegeek.dk/outlookonlenote/",
-    "title": "OutlookOnlenotes",
+    "url": "https://officegeek.dk/blog/gantt-diagram-i-excel/",
+    "title": "Gantt diagram i Excel",
+    "description": "Opret Gantt diagram i Excel",
+    "content": "Gantt diagrammer er meget nyttige når du vil visualisere et projekts tidslinje. Microsoft Project er et super program til at oprette Gantt diagrammer, men det kan godt være lidt for omfattende i forhold til dit behov.\nHer kommer jeg med et bud på hvordan du kan oprette et interaktivt Gantt diagram i Excel.\nData Jeg har 6 koloner med data:\n Faser Aktivitet Ansvarlig StartDato Antal Arbejdsdage SlutDato  Du kan fjerne eller tilføje ekstra kolonner, så det passer til dit behov.\nData er i en tabel, som har navnet: Data\ntabellen er placert i et selvstændigt ark - Data.\nPivot tabel På basis af tabellen skal der oprettes en Pivot tabel, som danner grundlag for Gantt diagrammet.\nDe felter der er med i Pivot tabellen er:\n Aktivitet StartDato SlutDato  StartDato og SlutDato skal have ændret beregning til henholdsvis Min og Maks.\nPlacer Pivot tabellen i et selvstændigt ark - her PivotData\nGant diagram Selev Gantt diagrammet består af to dele:\n Tekst med oplysninger om de enkelte opgaver Selve diagrammet  Jeg har desuden tilføjet to Udsnit værktøjer der gør det nemt at vælge Facer og Ansvarlig.\nGant diagrammet er placert i et selvstændigt ark: Gantt.\nDe 4 overskrifter er indtastet:\n Aktivitet Start dato Slut dato Varighed  Varighed Er beregnet med følgende formel:\n=HVIS.FEJL(ANTAL.ARBEJDSDAGE(C10;D10);\u0026quot;\u0026quot;)\nDen giver antallet af arbejdsdage mellem StartDato og SlutDato\nDer er brugt Betingetformatering til at vise søjlerne i celler.\nDen er oprettet med en Formattypografi som hedder Datasøjle og formatet er baseret på værdien i cellerne. Du kan selv vælge den farve som passer dig.\nVærdier Værdierne i; Aktivitet, StartDato og Slut Dato kommer fra Pivot tabellen, Data, i arket PivotData.\nDet er denne formel der er brugt:\n=HVIS(PivotData!B3=\u0026rdquo;\u0026quot;;\u0026quot;\u0026quot;;PivotData!B3)\nÅrsagen til at der er brugt en HVIS funktion er at så du nemt kan udvide dine data uden at skulle ændre/tilføje ekstra formler.\nGantt diagrammet Selve Gant diagrammet består af flere elementer:\n Dato linjen Søjler for Aktiviteterne Markering af DagsDato  Dato linjen Dato linjen brugere også Pivot tabellen, Data, fra arket PivotData.\nDatoer er placeret i række 9. Der er brugt Betinget formatering til at vise lørdage og søndage med rød tekst.\nDen første/\u0026ldquo;mindste\u0026rdquo; startdato er placeret i cellen F9 og den bliver hentet med denne formel:\n=MIN(Data[StartDato])\nDe efterfølgende datoer i, G7, H7, I7 osv. findes med formlen: =F9+1\nRække 8 ugedagen er hentet fra række 9. For derefter at bliver formateret til at kun at vise ugedagen - ddd.\nDagsdato For at gøre det nemmere at overskue Gantt diagrammet er der en markering af dags dato. Denne markering er oprettet ved hjælp af Betinget formatering.\nDen betingede formatering er oprette ved hjælp af en formel:\n=OG($B10\u0026lt;\u0026gt;\u0026rdquo;\u0026quot;;F$7=IDAG())\nDet formlene gør at checke om cellen i Aktivites kolonnen er tom og om dato værdien i række 7 er ligmed DagsDato.\nDagsdato finder du ved at bruge formlen: IDAG()\nDu vælger den farve der passer til dit layout.\nSøjler for Aktiviteter Gantt søjlerne vises også ved brug af betinget formatering. Jeg brugere en formel til at finde to betingelser:\n Cellen i StartDato er ikke tom Datoerne i Dato rækken - 7 er ligmed eller ligger imellem StartDato og SlutDato for den givne Aktivitet.  Det har jeg gjort ved at bruge denne formel:\n=OG($C10\u0026lt;\u0026gt;\u0026rdquo;\u0026quot;;MEDIAN($C10;$D10;F$7)=F$7)\nDet er et eksempel på hvordan du kan bruge MEDIAN til at undersøge om en værdi er mellem to grænseværdier.\nStriber For at gøre Gantt diagrammet mere læsbart er hveranden række farvet grå. Dette er gjort ved hjælp af betinget formatering.\nFormlen der er brugt er denne:\n=OG($B10\u0026lt;\u0026gt;\u0026rdquo;\u0026quot;;REST(RÆKKE();2)=0)\nBetinget formatering Der er tre formler for betinget formatering.\nRækkefølgenden på de tre formateringer er sat så søjlerne altid er først så kommer Dagsdato og til sidst de grå linjer.\nUdsnitsværktøj For at gøre udvælgelsen af: Faser og Ansvarlig er der oprettet to udsnitsværktøjer.\nDe er oprettet på basis af Pivot tabellen, Data, i arket PivotData.\nOpdatering Opdateringer, ændringer, skal du fortage i arket Data.\nNår du har ændret, tilføjet eller fjernet noget skal arket opdateres. Det kan du gøre på to måder:\n Genvejstast - Alt + CTRL + F5 Menu - Data - Opdater alle  "
+  },
+  {
+    "url": "https://officegeek.dk/outlookonenote/",
+    "title": "OutlookOnenotes",
+    "description": "",
+    "content": ""
+  },
+  {
+    "url": "https://officegeek.dk/power_bi_intro/",
+    "title": "Power_bi_intros",
     "description": "",
     "content": ""
   },
