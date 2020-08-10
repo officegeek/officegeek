@@ -7,7 +7,7 @@ type : "Excel"
 draft: false
 ---
 
-Gantt diagrammer er meget nyttige når du vil visualisere et projekts tidslinje. Microsoft Project er et super program til at oprette Gantt diagrammer, men det kan godt være lidt for omfattende i forhold til dit behov.
+Gantt diagrammer er nyttige når du vil visualisere et projekts opgaver på en tidslinje. Microsoft Project er et super program til at oprette Gantt diagrammer, men det kan godt være lidt omfattende i forhold til de felestes behovet.
 
 Her kommer jeg med et bud på hvordan du kan oprette et interaktivt Gantt diagram i Excel.
 
@@ -115,7 +115,7 @@ Den betingede formatering er oprette ved hjælp af en formel:
 
 *=OG($B10<>"";F$7=IDAG())*
 
-Det formlene gør at checke om cellen i *Aktivites* kolonnen er tom og om dato værdien i række *7* er ligmed *DagsDato*.
+Formlene checker om cellen i *Aktivites* kolonnen er tom og om dato værdien i række *9* er ligmed *DagsDato*.
 
 Dagsdato finder du ved at bruge formlen: *IDAG()*  
 Du vælger den farve der passer til dit layout.
@@ -127,11 +127,11 @@ Du vælger den farve der passer til dit layout.
 Gantt søjlerne vises også ved brug af betinget formatering. Jeg brugere en formel til at finde to betingelser:
 
 1. Cellen i *StartDato* er ikke tom
-2. Datoerne i *Dato rækken - 7* er ligmed eller ligger imellem *StartDato* og *SlutDato* for den givne Aktivitet.
+2. Datoerne i *Dato rækken - 9* er ligmed eller ligger imellem *StartDato* og *SlutDato* for den givne Aktivitet.
 
 Det har jeg gjort ved at bruge denne formel:
 
-*=OG($C10<>"";MEDIAN($C10;$D10;F$7)=F$7)*
+*=OG($C10<>"";MEDIAN($C10;$D10;F$9)=F$9)*
 
 Det er et eksempel på hvordan du kan bruge *MEDIAN* til at undersøge om en værdi er mellem to grænseværdier.
 
