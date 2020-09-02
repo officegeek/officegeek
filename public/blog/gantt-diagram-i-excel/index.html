@@ -368,6 +368,23 @@
 
 
 
+<li data-nav-id="https://officegeek.dk/dtu/r/r/" title="R programering"
+  class="sidelist  ">
+  <a href="https://officegeek.dk/dtu/r/r/">R programering</a>
+  
+  
+
+
+    
+    
+
+
+
+
+
+
+
+
 <li data-nav-id="https://officegeek.dk/dtu/intro/dato_2020_2/" title="Datoer 2020 2"
   class="sidelist  ">
   <a href="https://officegeek.dk/dtu/intro/dato_2020_2/">Datoer 2020 2</a>
@@ -1238,8 +1255,8 @@
         <div class="px-lg-5 px-4">
           <h2 class="mb-4 font-weight-medium">Gantt diagram i Excel</h2>
           
-          <div class="content"><p>Gantt diagrammer er meget nyttige når du vil visualisere et projekts tidslinje. Microsoft Project er et super program til at oprette Gantt diagrammer, men det kan godt være lidt for omfattende i forhold til dit behov.</p>
-<p>Her kommer jeg med et bud på hvordan du kan oprette et interaktivt Gantt diagram i Excel.</p>
+          <div class="content"><p>Gantt diagrammer er nyttige når du vil visualisere et projekts opgaver på en tidslinje. Microsoft Project er et super program til at oprette Gantt diagrammer, men det kan godt være lidt omfattende i forhold til de felestes behovet.</p>
+<p>Her er mit bud på hvordan du kan oprette et interaktivt Gantt diagram i Excel.</p>
 <h2 id="data">Data</h2>
 <p>Jeg har 6 koloner med data:</p>
 <ol>
@@ -1313,7 +1330,7 @@ Den er oprettet med en <em>Formattypografi</em> som hedder <em>Datasøjle</em> o
 <p><img src="/images/Gantt_DagsDato.jpg" alt="Gantt_Dato"></p>
 <p>Den betingede formatering er oprette ved hjælp af en formel:</p>
 <p><em>=OG($B10&lt;&gt;&rdquo;&quot;;F$7=IDAG())</em></p>
-<p>Det formlene gør at checke om cellen i <em>Aktivites</em> kolonnen er tom og om dato værdien i række <em>7</em> er ligmed <em>DagsDato</em>.</p>
+<p>Formlene checker om cellen i <em>Aktivites</em> kolonnen er tom og om dato værdien i række <em>9</em> er ligmed <em>DagsDato</em>.</p>
 <p>Dagsdato finder du ved at bruge formlen: <em>IDAG()</em><br>
 Du vælger den farve der passer til dit layout.</p>
 <p><img src="/images/Gantt_DagsDato_2.jpg" alt="Gantt_Dato"></p>
@@ -1321,10 +1338,10 @@ Du vælger den farve der passer til dit layout.</p>
 <p>Gantt søjlerne vises også ved brug af betinget formatering. Jeg brugere en formel til at finde to betingelser:</p>
 <ol>
 <li>Cellen i <em>StartDato</em> er ikke tom</li>
-<li>Datoerne i <em>Dato rækken - 7</em> er ligmed eller ligger imellem <em>StartDato</em> og <em>SlutDato</em> for den givne Aktivitet.</li>
+<li>Datoerne i <em>Dato rækken - 9</em> er ligmed eller ligger imellem <em>StartDato</em> og <em>SlutDato</em> for den givne Aktivitet.</li>
 </ol>
 <p>Det har jeg gjort ved at bruge denne formel:</p>
-<p><em>=OG($C10&lt;&gt;&rdquo;&quot;;MEDIAN($C10;$D10;F$7)=F$7)</em></p>
+<p><em>=OG($C10&lt;&gt;&rdquo;&quot;;MEDIAN($C10;$D10;F$9)=F$9)</em></p>
 <p>Det er et eksempel på hvordan du kan bruge <em>MEDIAN</em> til at undersøge om en værdi er mellem to grænseværdier.</p>
 <h4 id="striber">Striber</h4>
 <p>For at gøre Gantt diagrammet mere læsbart er hveranden række farvet <em>grå</em>. Dette er gjort ved hjælp af betinget formatering.</p>
@@ -1341,7 +1358,8 @@ Du vælger den farve der passer til dit layout.</p>
 <p>De er oprettet på basis af Pivot tabellen, <em>Data</em>, i arket <em>PivotData</em>.</p>
 <h2 id="opdatering">Opdatering</h2>
 <p>Opdateringer, ændringer, skal du fortage i arket <em>Data</em>.</p>
-<p>Når du har ændret, tilføjet eller fjernet noget skal arket opdateres. Det kan du gøre på to måder:</p>
+<p>Når du har ændret, tilføjet eller fjernet noget skal arket opdateres.</p>
+<p>Det kan du gøre på to måder:</p>
 <ul>
 <li>Genvejstast - <em>Alt + CTRL + F5</em></li>
 <li>Menu - <em>Data - Opdater alle</em></li>
@@ -1513,6 +1531,21 @@ Du vælger den farve der passer til dit layout.</p>
             
             
 
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+
+            
+            
+            
             
             
             

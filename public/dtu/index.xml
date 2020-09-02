@@ -23,6 +23,18 @@ Derfor er alt materiale online ressourcer. Jeg har inkluderet rigtig mange links
     </item>
     
     <item>
+      <title>R programering</title>
+      <link>https://officegeek.dk/dtu/r/r/</link>
+      <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>
+      
+      <guid>https://officegeek.dk/dtu/r/r/</guid>
+      <description>R er et sprog beregnet til matematisk analyse, først og fremmest, statistiske beregninger.
+Det bliver brugt af mere end 2 millioner mennesker og er verdens mest populære programmingssprog til statistiske beregninger.
+R fra 1993 er implementation af sproget S, som blev defineret tilbage i 1976 hos Bell Labs. R er fri software frigivet under GNU GPL licensen.
+I 2015 købte Microsoft firmaet &amp;lsquo;Revolution Analytics&amp;rsquo;, som har lavet en specielt server udgave af R, som Microsoft har integeret med SQL Server 2016 og Azure platformen under navnet &amp;lsquo;Microsoft R Server&amp;rsquo;.</description>
+    </item>
+    
+    <item>
       <title>Datoer 2020 2</title>
       <link>https://officegeek.dk/dtu/intro/dato_2020_2/</link>
       <pubDate>Sat, 29 Dec 2018 11:02:05 +0600</pubDate>

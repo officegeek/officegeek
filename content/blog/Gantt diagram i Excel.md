@@ -9,7 +9,7 @@ draft: false
 
 Gantt diagrammer er nyttige når du vil visualisere et projekts opgaver på en tidslinje. Microsoft Project er et super program til at oprette Gantt diagrammer, men det kan godt være lidt omfattende i forhold til de felestes behovet.
 
-Her kommer jeg med et bud på hvordan du kan oprette et interaktivt Gantt diagram i Excel.
+Her er mit bud på hvordan du kan oprette et interaktivt Gantt diagram i Excel.
 
 
 ## Data
@@ -162,7 +162,9 @@ De er oprettet på basis af Pivot tabellen, *Data*, i arket *PivotData*.
 ## Opdatering
 Opdateringer, ændringer, skal du fortage i arket *Data*.
 
-Når du har ændret, tilføjet eller fjernet noget skal arket opdateres. Det kan du gøre på to måder:
+Når du har ændret, tilføjet eller fjernet noget skal arket opdateres. 
+
+Det kan du gøre på to måder:
 
 * Genvejstast - *Alt + CTRL + F5*
 * Menu - *Data - Opdater alle*

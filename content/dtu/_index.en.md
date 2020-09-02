@@ -36,6 +36,7 @@ Dette modul er opdelt i følgende hovedemner:
 2. VBA programmering i Excel
 3. Databaser - Teori og helt grundlæggende SQL
 4. Microsoft Project
+5. R programmering
 
 Dette modul er hvad jeg vil kalde et **værktøjs kursus**, forstået på den måde at i vil lære at bruge nogle af de centrale værktøjer i får brug for når i er færdiguddandede.
 
