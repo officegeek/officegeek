@@ -57,3 +57,14 @@ VBA er **ikke** nemt, men det er heller ikke voldsomt svært at lærer :-)
 Der er afsat 4 undervisningsgange til VBA
 
 [Link til VBA](/dtu/vba/vba)
+
+## R
+I får en mini introduktion til R programmering.
+
+Det er med udgangspunkt i hvordan udfører du udvalgte Excel Kommandoer/Funktioner i R.
+
+R er et sprog beregnet til matematisk analyse, først og fremmest, statistiske beregninger. 
+
+Det bliver brugt af mere end 2 millioner mennesker og er verdens mest populære programmingssprog til statistiske beregninger.
+
+[Link til R](/dtu/r/r)

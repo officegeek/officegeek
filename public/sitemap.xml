@@ -43,11 +43,6 @@
   </url>
   
   <url>
-    <loc>https://officegeek.dk/dtu/r/r/</loc>
-    <lastmod>2018-12-29T11:02:05+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://officegeek.dk/basic-startup/requirments/</loc>
     <lastmod>2018-12-29T11:02:05+06:00</lastmod>
   </url>
@@ -194,6 +189,11 @@
   
   <url>
     <loc>https://officegeek.dk/dtu/vba/vba/</loc>
+    <lastmod>2018-12-29T11:02:05+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://officegeek.dk/dtu/r/r/</loc>
     <lastmod>2018-12-29T11:02:05+06:00</lastmod>
   </url>
   

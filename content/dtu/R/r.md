@@ -1,7 +1,7 @@
 ﻿---
 title: "R programering"
 date: 2018-12-29T11:02:05+06:00
-weight: 1
+weight: 8
 draft: false
 ---
 R er et sprog beregnet til matematisk analyse, først og fremmest, statistiske beregninger. 
